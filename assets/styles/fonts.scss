@@ -1,0 +1,115 @@
+// all fontfaces and font classes stored here
+// classes like f22-400 are font classes that first number is font size and second number
+// is font weigth
+// clamp is a function for responsive font size or any other property read more on
+// https://developer.mozilla.org/en-US/docs/Web/CSS/clamp#:~:text=The%20clamp()%20CSS%20function,and%20a%20maximum%20allowed%20value.
+
+
+
+@font-face {
+    font-family: 'Bakh';
+    src:url('./fonts/YEKANBAKH-REGULAR-fa.woff') format('woff2'),
+        url('./fonts/YEKANBAKH-REGULAR-fa.woff') format('woff');
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Bakh-Bold';
+    src:url('./fonts/YEKANBAKH-HEAVY-fa.woff2') format('woff2'),
+        url('./fonts/YEKANBAKH-HEAVY-fa.woff') format('woff');
+    font-style: normal;
+}
+.font-bold {
+    font-family: 'Bakh-Bold' !important;
+}
+.f10-400{
+    font-style: normal;
+    font-weight: 400;
+    font-size: clamp(8px,1vw,10px);
+    line-height: 120%;
+}
+.f12-500{
+    font-style: normal;
+    font-weight: 500;
+    font-size: clamp(10px,1vw,12px);
+    line-height: 120%;
+}
+.f12-600{
+    font-style: normal;
+    font-weight: 600;
+    font-size: clamp(10px,1vw,12px);
+    line-height: 120%;
+}
+.f12-700{
+    font-style: normal;
+    font-weight: 700;
+    font-size: clamp(10px,1vw,12px);
+    line-height: 120%;
+}
+.f14-400{
+    font-style: normal;
+    font-weight: 400;
+    font-size: clamp(12px,1vw,14px);
+    line-height: 120%;
+}
+.f14-500{
+    font-style: normal;
+    font-weight: 500;
+    font-size: clamp(12px,1vw,14px);
+    line-height: 120%;
+}
+.f14-700{
+    font-style: normal;
+    font-weight: 700;
+    font-size: clamp(12px,1vw,14px);
+    line-height: 120%;
+}
+.f14-900{
+  font-style: normal;
+  font-weight: 900;
+  font-size: clamp(12px,1vw,14px);
+  line-height: 120%;
+}
+.f16-500{
+    font-style: normal;
+    font-weight: 500;
+    font-size: clamp(14px,1vw,16px);
+    line-height: 120%;
+}
+.f16-900{
+    font-style: normal;
+    font-weight: 900;
+    font-size: clamp(14px,1vw,16px);
+    line-height: 120%;
+}
+.f18-500{
+    font-style: normal;
+    font-weight: 500;
+    font-size: clamp(15px,2vw,18px);
+    line-height: 120%;
+}
+.f18-800{
+    font-style: normal;
+    font-weight: 800;
+    font-size: clamp(15px,2vw,18px);
+    line-height: 120%;
+}
+.f18-900{
+    font-style: normal;
+    font-weight: 900;
+    font-size: clamp(15px,2vw,18px);
+    line-height: 120%;
+}
+.f24-900{
+  font-style: normal;
+  font-weight: 900;
+  font-size: clamp(20px,1vw,24px);
+  line-height: 120%;
+}
+.f28-900{
+  font-style: normal;
+  font-weight: 900;
+  font-size: clamp(24px,2vw,28px);
+  line-height: 120%;
+  font-family: 'Bakh-Bold' !important;
+}
+

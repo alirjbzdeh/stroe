@@ -1,0 +1,154 @@
+<template>
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="hidden">
+        <defs>
+            <!-- star Fill -->
+            <symbol id="starFill" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <title>
+                    star Fill
+                </title>
+                <path d="M11.98 2.1a.455.455 0 00-.414.315L9.426 9.05l-6.97-.014a.455.455 0 00-.268.823l5.648 4.087-2.169 6.628a.455.455 0 00.7.509L12 16.973l5.634 4.11a.455.455 0 00.7-.509l-2.169-6.628 5.648-4.087a.455.455 0 00-.267-.823l-6.97.014-2.144-6.635a.455.455 0 00-.451-.315z"></path>
+            </symbol>
+            <!-- ciecle outline -->
+            <symbol id="addCircleOutline" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <title>
+                    add circle outline
+                </title>
+                <path fill-rule="evenodd" d="M2 12c0 5.523 4.477 10 10 10s10-4.477 10-10S17.523 2 12 2 2 6.477 2 12zm18 0a8 8 0 11-16 0 8 8 0 0116 0zm-9-1V7h2v4h4v2h-4v4h-2v-4H7v-2h4z" clip-rule="evenodd"></path>
+            </symbol>
+            <!-- add circle -->
+            <symbol id="addCircleFill" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <title>
+                    addCircleFill
+                </title>
+                <path fill-rule="evenodd" d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm-1-11V7h2v4h4v2h-4v4h-2v-4H7v-2h4z"></path>
+            </symbol>
+            <!-- ad svg -->
+            <symbol id="ads" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <title>
+                    ads
+                </title>
+                <path fill-rule="evenodd" d="M20.198 1.408l2.779 15.757-4.803.847-2.737-.302a4 4 0 01-7.972-.207l-.006-.205-.005-.442-4.694.827-1.737-9.848 4.782-.843 9.591-4.737 4.802-.847zM9.456 17.05l.003.238a2 2 0 003.99.203l-3.993-.441zm7.15-12.979l1.97-.346 2.084 11.818-1.97.347L16.606 4.07zm-1.898.753L7.236 8.516l1.129 6.402 8.284.913-1.94-11.007zM3.34 9.458l1.97-.348 1.042 5.91-1.97.346L3.34 9.458z" clip-rule="evenodd"></path>
+            </symbol>
+            <!-- toman svg -->
+            <symbol id="toman" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14">
+                <title>toamn</title>
+                <path fill-rule="evenodd" d="M3.057 1.742L3.821 1l.78.75-.776.741-.768-.749zm3.23 2.48c0 .622-.16 1.111-.478 1.467-.201.221-.462.39-.783.505a3.251 3.251 0 01-1.083.163h-.555c-.421 0-.801-.074-1.139-.223a2.045 2.045 0 01-.9-.738A2.238 2.238 0 011 4.148c0-.059.001-.117.004-.176.03-.55.204-1.158.525-1.827l1.095.484c-.257.532-.397 1-.419 1.403-.002.04-.004.08-.004.12 0 .252.055.458.166.618a.887.887 0 00.5.354c.085.028.178.048.278.06.079.01.16.014.243.014h.555c.458 0 .769-.081.933-.244.14-.139.21-.383.21-.731V2.02h1.2v2.202zm5.433 3.184l-.72-.7.709-.706.735.707-.724.7zm-2.856.308c.542 0 .973.19 1.293.569.297.346.445.777.445 1.293v.364h.18v-.004h.41c.221 0 .377-.028.467-.084.093-.055.14-.14.14-.258v-.069c.004-.243.017-1.044 0-1.115L13 8.05v1.574a1.4 1.4 0 01-.287.863c-.306.405-.804.607-1.495.607h-.627c-.061.733-.434 1.257-1.117 1.573-.267.122-.58.21-.937.265a5.845 5.845 0 01-.914.067v-1.159c.612 0 1.072-.082 1.38-.247.25-.132.376-.298.376-.499h-.515c-.436 0-.807-.113-1.113-.339-.367-.273-.55-.667-.55-1.18 0-.488.122-.901.367-1.24.296-.415.728-.622 1.296-.622zm.533 2.226v-.364c0-.217-.048-.389-.143-.516a.464.464 0 00-.39-.187.478.478 0 00-.396.187.705.705 0 00-.136.449.65.65 0 00.003.067c.008.125.066.22.177.283.093.054.21.08.352.08h.533zM9.5 6.707l.72.7.724-.7L10.209 6l-.709.707zm-6.694 4.888h.03c.433-.01.745-.106.937-.29.024.012.065.035.12.068l.074.039.081.042c.135.073.261.133.379.18.345.146.67.22.977.22a1.216 1.216 0 00.87-.34c.3-.285.449-.714.449-1.286a2.19 2.19 0 00-.335-1.145c-.299-.457-.732-.685-1.3-.685-.502 0-.916.192-1.242.575-.113.132-.21.284-.294.456-.032.062-.06.125-.084.191a.504.504 0 00-.03.078 1.67 1.67 0 00-.022.06c-.103.309-.171.485-.205.53-.072.09-.214.14-.427.147-.123-.005-.209-.03-.256-.076-.057-.054-.085-.153-.085-.297V7l-1.201-.5v3.562c0 .261.048.496.143.703.071.158.168.296.29.413.123.118.266.211.43.28.198.084.42.13.665.136v.001h.036zm2.752-1.014a.778.778 0 00.044-.353.868.868 0 00-.165-.47c-.1-.134-.217-.201-.35-.201-.18 0-.33.103-.447.31-.042.071-.08.158-.114.262a2.434 2.434 0 00-.04.12l-.015.053-.015.046c.142.118.323.216.544.293.18.062.325.092.433.092.044 0 .086-.05.125-.152z" clip-rule="evenodd"></path>
+            </symbol>
+            <!-- delivery today svg -->
+            <symbol id="deliveryToday" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <title>
+                    deliveryToday
+                </title>
+                <path d="M22 5h-2v2h2V5z"></path>
+                <path fill-rule="evenodd" d="M15 15h6v-2h-6a1 1 0 110-2h5V9h-6a1 1 0 110-2h4V5H7a7 7 0 000 14h11v-2h-3a1 1 0 110-2zm-3-3a5 5 0 10-10 0 5 5 0 0010 0z" clip-rule="evenodd"></path>
+                <path d="M21.5 9H24v2h-2.5V9zM21.5 17H19v2h2.5v-2z"></path>
+                <path fill-rule="evenodd" d="M7 12V9.75H5.5v3c0 .414.336.75.75.75h3V12H7z" clip-rule="evenodd"></path>
+            </symbol>
+            <!-- guarantee svg -->
+            <symbol id="guarantee" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <title>
+                    guarantee
+                </title>
+                <path fill-rule="evenodd" d="M4.725 4.038l7-2a1 1 0 01.55 0l7 2A1 1 0 0120 5v7.938a8 8 0 01-4.03 6.946l-3.474 1.984a1 1 0 01-.992 0L8.03 19.884A8 8 0 014 12.938V5a1 1 0 01.725-.962zM6 5.754v7.184a6 6 0 003.023 5.21l2.977 1.7 2.977-1.7A6 6 0 0018 12.937V5.754L12 4.04 6 5.754zm9 2.539l-3.793 3.793-1.793-1.793L8 11.707l2.5 2.5a1 1 0 001.414 0l4.5-4.5L15 8.293z" clip-rule="evenodd"></path>
+            </symbol>
+            <!-- seller svg -->
+            <symbol id="seller" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <title>
+                    seller
+                </title>
+                <path fill-rule="evenodd" d="M19.5 3h-15a1 1 0 00-.959.715l-1.5 5.053A1 1 0 002 9.053V12a1 1 0 001 1h.006l.038 7.006A1 1 0 004.048 21l9.956-.035a1 1 0 00.996-1V13h4v8h2v-8a1 1 0 001-1V9.053a1 1 0 00-.041-.285l-1.5-5.053A1 1 0 0019.5 3zm.5 8V9.198L18.754 5H5.246L4 9.198V11h16zm-7 2H5.006l.033 5.997L13 18.968V13z" clip-rule="evenodd"></path>
+            </symbol>
+            <!-- product Available svg -->
+            <symbol id="productAvailable" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <title>
+                    productAvailable
+                </title>
+                <path fill-rule="evenodd" d="M7 19H6a1 1 0 01-1-1V6a1 1 0 011-1h2v7h8V5h2a1 1 0 011 1v12a1 1 0 01-1 1h-1v2h1a3 3 0 003-3V6a3 3 0 00-3-3H6a3 3 0 00-3 3v12a3 3 0 003 3h1v-2zm3-9V5h4v5h-4zm-.293 7.793l1.755 1.755 3.795-4.217 1.486 1.338-4.5 5a1 1 0 01-1.45.038l-2.5-2.5 1.414-1.414z" clip-rule="evenodd"></path>
+            </symbol>
+            <!-- variation color svg (little tiny dots) -->
+            <symbol id="variationColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                <title>
+                    variationColor
+                </title>
+                <path d="M0 10C0 4.477 4.477 0 10 0s10 4.477 10 10-4.477 10-10 10S0 15.523 0 10z"></path>
+                <path stroke="#030A16" stroke-opacity=".1" d="M.5 10a9.5 9.5 0 1119 0 9.5 9.5 0 01-19 0z"></path>
+            </symbol>
+            <!-- delivery express svg -->
+            <symbol id="deliveryExpress" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <title>
+                    delivery express svg
+                </title>
+                <path fill-rule="evenodd" d="M14.17 19H8.83a3.001 3.001 0 01-5.66 0H2a1 1 0 01-1-1v-7.333C1 8.097 3.033 6 5.556 6H9V5a1 1 0 011-1h12a1 1 0 011 1v13a1 1 0 01-1 1h-2.17a3.001 3.001 0 01-5.66 0zm0-2H11V6h10v11h-1.17a3.001 3.001 0 00-5.66 0zM9 17h-.17a3.001 3.001 0 00-5.66 0H3v-3h5v-2H3v-1.333C3 9.187 4.151 8 5.556 8H9v9zm-2 1a1 1 0 11-2 0 1 1 0 012 0zm10 1a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd"></path>
+            </symbol>
+            <!-- delivery in person svg -->
+            <symbol id="deliveryInPerson" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <title></title>
+                <path fill-rule="evenodd" d="M17 3a1 1 0 00-1-1H8a1 1 0 00-1 1v5a5 5 0 0010 0h3V6h-3V3zm-5 11c6.095 0 9.572 2.318 9.996 6.908A1 1 0 0121 22H3a1 1 0 01-.996-1.092C2.428 16.318 5.904 14 12 14zm0 2c-4.58 0-7.084 1.323-7.812 4h15.624c-.728-2.677-3.231-4-7.812-4zM9 8a3 3 0 006 0H9zm0-4h6v2H9V4z" clip-rule="evenodd"></path>
+            </symbol>
+            <!-- delete svg -->
+            <symbol id="delete" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <title>
+                    delete
+                </title>
+                <path fill-rule="evenodd" d="M8 2v2h8V2H8zM4 7V5h16v2H4zm13 1h2v11a3 3 0 01-3 3H8a3 3 0 01-3-3V8h2v11a1 1 0 001 1h8a1 1 0 001-1V8zm-6 0H9v10h2V8zm2 0h2v10h-2V8z" clip-rule="evenodd"></path>
+            </symbol>
+            <!-- chevron left svg -->
+            <symbol id="chevronLeft" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <title>
+                    chevron left
+                </title>
+                <path d="M11.414 12l4.293 4.293-1.414 1.414-5-5a1 1 0 010-1.414l5-5 1.414 1.414L11.414 12z"></path>
+            </symbol>
+            <!-- info svg (filled version) -->
+            <symbol id="infoFill" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <title>
+                    infoFill
+                </title>
+                <path fill-rule="evenodd" d="M2 12c0 5.523 4.477 10 10 10s10-4.477 10-10S17.523 2 12 2 2 6.477 2 12zm10-5a1 1 0 110 2 1 1 0 010-2zm-2 3h3v7h-2v-5h-1v-2z" clip-rule="evenodd"></path>
+            </symbol>
+            <!-- dots outlined versio -->
+            <symbol id="dotOutline" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+                <title>
+                    dotOutline
+                </title>
+                <circle cx="8" cy="8" r="2"></circle>
+            </symbol>
+            <!-- plus members svg -->
+            <symbol id="plus" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <title>
+                    plus memebers
+                </title>
+                <path fill-rule="evenodd" d="M20.362 13.877a.738.738 0 00.638-.732v-2.29l-.008-.11a.738.738 0 00-.63-.622l-.1-.007-.16.005-.066-.001-.276.014a5.745 5.745 0 01-4.215-1.68 5.748 5.748 0 01-1.665-4.492L13.88 3.9l.01-.002v-.159l-.008-.11a.739.739 0 00-.63-.621L13.15 3h-2.302l-.1.007a.738.738 0 00-.638.731v.159l.01.002-.001.063a5.748 5.748 0 01-1.665 4.492 5.746 5.746 0 01-4.491 1.666h-.067l-.16-.004-.1.007a.738.738 0 00-.637.732v2.29l.008.11a.738.738 0 00.63.622l.1.007.16-.005.066.001.276-.014a5.745 5.745 0 014.215 1.68 5.748 5.748 0 011.665 4.492l.001.063-.01.002v.159l.008.11a.739.739 0 00.63.621l.1.007h2.302l.1-.007a.738.738 0 00.638-.731v-.159l-.01-.002.001-.063a5.748 5.748 0 011.665-4.492 5.746 5.746 0 014.491-1.666h.067l.16.004.1-.007zM12.06 17.88l-.056.266-.003-.007-.003.014-.056-.273-.081-.322a7.734 7.734 0 00-5.715-5.495L5.835 12l.31-.063a7.737 7.737 0 005.796-5.816l.054-.264.005.004.003-.014.056.273.081.322a7.733 7.733 0 005.715 5.495l.31.063-.31.063a7.737 7.737 0 00-5.796 5.816z" clip-rule="evenodd"></path>
+            </symbol>
+            <!-- price tag svg -->
+            <symbol id="priceTag" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <title>
+                    price tag
+                </title>
+                <path fill-rule="evenodd" d="M2.293 12.293l9-9A1 1 0 0112 3h5a1 1 0 01.707.293l3 3A1 1 0 0121 7v5a1 1 0 01-.293.707l-9 9a1 1 0 01-1.414 0l-8-8a1 1 0 010-1.414zM4.414 13L11 19.586l8-8V7.414L16.586 5h-4.172l-8 8zM15 12a3 3 0 110-6 3 3 0 010 6zm0-2a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd"></path>
+            </symbol>
+            <!-- tik (verified user) -->
+            <symbol id="verifiedUser" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <title>
+                    verified user
+                </title>
+                <path fill-rule="evenodd" d="M20.661 7l-.274 2.623a.347.347 0 00.065.24L22 12l-1.548 2.137a.347.347 0 00-.065.24L20.661 17l-2.41 1.073a.346.346 0 00-.177.176L17 20.661l-2.624-.274a.347.347 0 00-.24.065L12 22l-2.138-1.548a.345.345 0 00-.238-.065l-2.625.274-1.073-2.41a.348.348 0 00-.176-.177L3.339 17l.274-2.624a.349.349 0 00-.065-.24L2 12l1.548-2.137a.349.349 0 00.065-.24L3.339 7l2.41-1.073a.345.345 0 00.177-.176L7 3.339l2.625.274a.35.35 0 00.24-.065L12 2l2.137 1.548a.35.35 0 00.24.065L17 3.34l1.073 2.41a.348.348 0 00.176.177L20.661 7zM7.707 10.292l2.793 2.793 5.793-5.793 1.414 1.414-6.5 6.5a1 1 0 01-1.414 0l-3.5-3.5 1.414-1.414z" clip-rule="evenodd"></path>
+            </symbol>
+            <!-- info svg (outline version) -->
+            <symbol id="infoOutline" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <title>
+                    info outline
+                </title>
+                <path fill-rule="evenodd" d="M2 12c0 5.523 4.477 10 10 10s10-4.477 10-10S17.523 2 12 2 2 6.477 2 12zm18 0a8 8 0 11-16 0 8 8 0 0116 0zm-10-2h3v7h-2v-5h-1v-2zm3-2a1 1 0 10-2 0 1 1 0 002 0z" clip-rule="evenodd"></path>
+            </symbol>
+        </defs>
+    </svg>
+</template>
+
+<script setup lang="ts">
+
+</script>
+
+<style scoped>
+
+</style>
