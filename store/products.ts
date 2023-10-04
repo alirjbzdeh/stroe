@@ -21,31 +21,26 @@ export const useProducts = defineStore('products', {
     }),
     getters: {},
     actions: {
-        async getProductsList () {
-            const config = useRuntimeConfig()
-            
-
-            this.skeletonLoading = true
-            
-            const res = await $fetch(urls.products, {
-                baseURL: config.public.apiBase
-            })
-            
-            this.skeletonLoading = false
-            
-            
-            // if (err) {
-            //     Swal.fire({
-            //         icon: 'error',
-            //         title: 'خطا',
-            //         text: 'مشکلی پیش آمده است مجدد تلاش کنید',
-            //         confirmButtonText: 'باشه'
-            //     })
-            // } else {
-                this.allProductsList = res
-                this.productsList = res
+        async getProductsList () {       
+            const { data, pending, error } = await useCustomFetch(urls.products)
+            this.skeletonLoading = pending.value
+            if (data.value) {
+                console.log(data.value);
+                this.allProductsList = data.value
+                this.productsList = data.value
                 this.productsFilters = 'all'
-            // }
+            }
+            if (error.value) {
+                Swal.fire({
+                    icon: 'error',
+                    title: 'خطا',
+                    text: 'مشکلی پیش آمده است مجدد تلاش کنید',
+                    confirmButtonText: 'باشه'
+                })
+            }
+            
+            
+            
         },
         filterProducts (filter: productsFiltersType) {
             this.productsFilters = filter

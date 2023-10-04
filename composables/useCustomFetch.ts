@@ -5,7 +5,7 @@ export function useCustomFetch<T> (url: string, options: UseFetchOptions<T> = {}
   const config = useRuntimeConfig()
 
   const defaults: UseFetchOptions<T> = {
-    baseURL: config.public.apiBase,
+    baseURL: 'https://mocki.io/v1/',
     // cache request
     key: url
   }

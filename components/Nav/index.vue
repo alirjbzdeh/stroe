@@ -14,6 +14,7 @@ const navItems = [
     },
 ]
 
+
 </script>
 <template>
     <nav class="flex flex-row justify-between w-full p-4">

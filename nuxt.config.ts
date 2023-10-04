@@ -1,11 +1,5 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  runtimeConfig: {
-    // Public keys that are exposed to the client
-    public: {
-      apiBase: 'https://mocki.io/v1/'
-    }
-  },
   devtools: { 
     enabled: true ,
     timeline: {
@@ -22,5 +16,6 @@ export default defineNuxtConfig({
   css: [
     '~/assets/styles/main.scss',
     '~/assets/styles/fonts.scss',
-  ]
+  ],
+  ssr: false
 })
