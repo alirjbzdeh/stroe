@@ -25,7 +25,6 @@ export const useProducts = defineStore('products', {
             const { data, pending, error } = await useCustomFetch(urls.products)
             this.skeletonLoading = pending.value
             if (data.value) {
-                console.log(data.value);
                 this.allProductsList = data.value
                 this.productsList = data.value
                 this.productsFilters = 'all'

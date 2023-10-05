@@ -3,7 +3,7 @@
 </script>
 <template>
     <div>
-        single product
+        
     </div>
 </template>
 

@@ -12,10 +12,42 @@ const props = defineProps({
   },
 })
 
-onMounted(() => {
-    console.log(props.product);
-    
-})
+
+const deleteBtn = ref<boolean>(false)
+const disableAdd = ref<boolean>(false)
+
+
+const toggleDisableAdd = () => {
+    if (!!props.product.remainingNumber === true && cartStore.shopingListIds[props.product.id] >= props.product.remainingNumber) {
+           disableAdd.value = true
+    } else {
+        disableAdd.value = false
+    }
+}
+
+
+const addMore = () => {
+    if (props.product.remainingNumber && (cartStore.shopingListIds[props.product.id] < props.product.remainingNumber)) {
+        cartStore.addToList(props.product.id)
+        toggleDisableAdd()
+    } else if (!!props.product.remainingNumber === false) {
+        cartStore.addToList(props.product.id)
+    }
+    // show delete btn
+    if (cartStore.shopingListIds[props.product.id] > 0) {
+        deleteBtn.value = true
+    }
+}
+const removeItem = () => {
+    if (cartStore.shopingListIds[props.product.id]) {
+        cartStore.removeFromList(props.product.id)
+        toggleDisableAdd()
+    }
+    // if item has limit for order we disable and enable order btn
+    if (!!cartStore.shopingListIds[props.product.id] === false) {
+        deleteBtn.value = false
+    }
+}
 
 const priceWithDiscount = (price: number, percent: number): number => (price - (percent*price)/100)
 </script>
@@ -24,7 +56,15 @@ const priceWithDiscount = (price: number, percent: number): number => (price - (
         <div class=" h-full w-full">
             <img src="../../assets/svgs/specialTag.svg" alt="">
             <img :src="props.product.image" alt="">
-            <ToolsIcons width="24" height="24" svgId="#addCircleOutline" style="fill: #ef394e" @click="cartStore.addToList(props.product.id)"/>
+            <div v-if="cartStore.shopingListIds[props.product.id]" class="flex flex-row items-center g4">
+                <div class="w-6 h-6 flex items-center justify-center">
+                    <span v-if="cartStore.shopingListIds[props.product.id]" :class="disableAdd ? 'number-in-card-disabled text-neutral-500 cursor-not-allowed' : 'text-primary-700 cursor-pointer'" class="f14-700 number-in-card flex items-center justify-center" @click.prevent="addMore">
+                        {{ cartStore.shopingListIds[props.product.id] }}
+                    </span>
+                </div>
+                <ToolsIcons v-if="deleteBtn" width="24" height="24" svgId="#delete" style="fill: #ef394e" @click.prevent="removeItem"/>
+            </div>
+            <ToolsIcons v-else width="24" height="24" svgId="#addCircleOutline" class="cursor-pointer" style="fill: #ef394e" @click.prevent="cartStore.addToList(props.product.id)"/>
             <div class="add-to-shop w-6 h-6">
                 
             </div>
@@ -76,6 +116,13 @@ const priceWithDiscount = (price: number, percent: number): number => (price - (
         box-shadow: (0 1px 5px rgba(0,0,0,.2));
     }
 }
-
-
+.number-in-card {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 2px solid #ef394e;
+}
+.number-in-card-disabled {
+    border: 2px solid #81858b;
+}
 </style>
