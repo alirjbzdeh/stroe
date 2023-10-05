@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { useCart} from '~/store/cart'
-import { toLocal } from '~/helpers/helpersFunc'
+import { toLocal, priceWithDiscount } from '~/helpers/helpersFunc'
 
 const cartStore = useCart()
 const props = defineProps({
@@ -49,7 +49,6 @@ const removeItem = () => {
     }
 }
 
-const priceWithDiscount = (price: number, percent: number): number => (price - (percent*price)/100)
 </script>
 <template>
     <NuxtLink class="card py-3 px-4 border-left-bottom rounded-sm cursor-pointer" :to="'/products/'+props.product.id">
@@ -65,9 +64,6 @@ const priceWithDiscount = (price: number, percent: number): number => (price - (
                 <ToolsIcons v-if="deleteBtn" width="24" height="24" svgId="#delete" style="fill: #ef394e" @click.prevent="removeItem"/>
             </div>
             <ToolsIcons v-else width="24" height="24" svgId="#addCircleOutline" class="cursor-pointer" style="fill: #ef394e" @click.prevent="cartStore.addToList(props.product.id)"/>
-            <div class="add-to-shop w-6 h-6">
-                
-            </div>
             <span class="f16-900 text-neutral-700">
                 {{props.product.title}}
             </span>

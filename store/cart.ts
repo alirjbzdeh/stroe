@@ -1,17 +1,25 @@
+import { useProducts} from '~/store/products'
+import { priceWithDiscount } from '~/helpers/helpersFunc'
 
 interface cartInterface {
-    shopingListIds: Record<number, number>
+    shopingListItems: Record<string, any>[];
+    shopingListIds: Record<number, number>;
     // my prefer was code below but i didnt had enough time
     // shopingListIds: Map<number, number>
-    shopItemsLength: number
+    shopItemsLength: number;
+    totalPrice: number;
+    price: number;
 
 }
 
 
 export const useCart = defineStore('cart', {
     state: () :cartInterface => ({ 
+        shopingListItems: [],
         shopingListIds: [],
-        shopItemsLength: 0
+        shopItemsLength: 0,
+        totalPrice: 0,
+        price: 0
     }),
     getters: {},
     actions: {
@@ -40,6 +48,29 @@ export const useCart = defineStore('cart', {
             objKeys.map((e, index) => {
                 this.shopItemsLength += objVals[index]
             })   
+        },
+        setupCart() {
+            this.totalPrice = 0
+            this.price = 0
+            const productsStore = useProducts()
+            const itemsIds = Object.keys(this.shopingListIds)
+            this.shopingListItems = productsStore.productsList.filter(e =>  itemsIds.includes(e.id))
+            this.shopingListItems.map(e => {
+                e.count = this.shopingListIds[e.id]
+                this.price += Number(this.shopingListIds[e.id]*e.price)
+                // if item has discount we calculate that discount price and then multplie it with number if ordered item
+                if (e.discountPercent) {
+                    const discountedPrice = priceWithDiscount(e.price, e.discountPercent)
+                    this.totalPrice += Number(this.shopingListIds[e.id]*discountedPrice)
+                    console.log('discountedPrice', discountedPrice);
+                    console.log('shopingListIds', this.shopingListIds[e.id]);
+                    
+                } else {
+                    this.totalPrice += Number(this.shopingListIds[e.id]*e.price)
+                }
+            })
+            console.log('price', this.price);
+            
         }
     }
 })

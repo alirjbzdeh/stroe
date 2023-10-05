@@ -46,3 +46,11 @@ export function toLocal(number: number | string = 0 , decimal: number = 8) {
 }
 
 
+export function priceWithDiscount (price: number, discount: number): number {
+  return price - ((discount*price)/100)
+}
+
+export function discountPrice (price: number, discount: number): number {
+  return (discount*price)/100
+}
+

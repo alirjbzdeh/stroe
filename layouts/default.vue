@@ -1,6 +1,6 @@
 <template>
    <div class="flex flex-col w-full container mx-auto">
-      <Nav />
+      <Nav :key="route.name" />
       <slot />
    </div>
 
@@ -8,6 +8,7 @@
 
 
 <script setup lang="ts">
+const route = useRoute()
 </script>
 
 

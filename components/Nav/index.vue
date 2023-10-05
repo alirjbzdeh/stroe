@@ -4,8 +4,9 @@ import { useCart } from '~/store/cart'
 
 const productsStore = useProducts()
 const cartStore = useCart()
+const route = useRoute()
 
-const navItems = [
+const navFilters = [
     {
         name: 'همه',
         filterProperty: 'all',
@@ -16,11 +17,15 @@ const navItems = [
     },
 ]
 
+const routePth = computed(() => route.path)
 </script>
 <template>
-    <nav class="flex flex-row justify-between w-full p-4">
+    <nav class="flex flex-row items-center justify-between w-full p-4">
         <!-- links of navabr -->
-        <NavFilters :filters="navItems" />
+        <NavFilters v-if="routePth === '/products'" :filters="navFilters" />
+        <NuxtLink v-else to="/products" class="relative inline-flex rounded py-2">
+            محصولات
+        </NuxtLink>
         <!-- show all products -->
         <div class="flex flex-row items-center gap-4">
             <span class="f16-500 text-neutral-500">
@@ -44,5 +49,6 @@ const navItems = [
 <style scoped lang="scss">
 nav {
     box-shadow: 0 1px 0 rgba(0,0,0,.14),0 2px 0 rgba(0,0,0,.05);
+    margin-bottom: 16px;
 }
 </style>
